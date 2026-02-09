@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Crown, ShieldCheck, Coins, Users, Loader, Lock } from 'lucide-react';
-import { CyberButton, IsotypeTheFunFanReporter } from '../ui/CyberComponents';
+import { CyberButton, MeritScoreLogo } from '../ui/CyberComponents';
 
 interface Props {
   userProfile: { handle: string, specialty: string };
@@ -286,7 +286,7 @@ export const SpecialtySelectionScreen: React.FC<Props> = ({ userProfile, onCompl
             <div className="absolute inset-0 border-4 border-[#1a1a1a] rounded-full"></div>
             <div className="absolute inset-0 border-4 border-cyber-green rounded-full transition-all duration-100 ease-out" style={{ clipPath: `inset(${100 - syncProgress}% 0 0 0)` }}></div>
             <div className="relative z-10 w-20 h-20 p-2">
-              <IsotypeTheFunFanReporter color="#39ff14" />
+              <MeritScoreLogo color="#39ff14" />
             </div>
             <div className="absolute inset-0 rounded-full shadow-[0_0_30px_rgba(57,255,20,0.1)]"></div>
           </div>

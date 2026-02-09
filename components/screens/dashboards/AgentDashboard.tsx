@@ -159,9 +159,9 @@ export const AgentDashboard: React.FC<Props> = ({ onNavigate, onBack, agentId })
             <div className="w-full max-w-sm bg-[#050505] border border-white/20 rounded-xl overflow-hidden shadow-2xl relative flex flex-col max-h-[80vh]">
                {/* Header */}
                <div className={`px-4 py-3 border-b flex justify-between items-center ${hivePortalData.type === 'BID' ? 'bg-yellow-900/20 border-yellow-500/50' :
-                     hivePortalData.type === 'VIRAL' ? 'bg-pink-900/20 border-pink-500/50' :
-                        hivePortalData.type === 'PROFILE' ? 'bg-purple-900/20 border-purple-500/50' :
-                           'bg-emerald-900/20 border-emerald-500/50'
+                  hivePortalData.type === 'VIRAL' ? 'bg-pink-900/20 border-pink-500/50' :
+                     hivePortalData.type === 'PROFILE' ? 'bg-purple-900/20 border-purple-500/50' :
+                        'bg-emerald-900/20 border-emerald-500/50'
                   }`}>
                   <div className="flex items-center gap-2">
                      {hivePortalData.type === 'BID' && <Gavel size={16} className="text-yellow-500" />}
@@ -456,7 +456,7 @@ export const AgentDashboard: React.FC<Props> = ({ onNavigate, onBack, agentId })
             </div>
             <div className="bg-pink-900/10 border border-pink-500/30 rounded-xl overflow-hidden">
                {[
-                  { rank: 1, user: 'PartyAnimal_X', likes: '1.2k', comments: '342', verified: true, post: 'The laser show at Zone B is INSANE! #TFFR #SuperBowl' },
+                  { rank: 1, user: 'PartyAnimal_X', likes: '1.2k', comments: '342', verified: true, post: 'The laser show at Zone B is INSANE! #MERIT_SCORE #SuperBowl' },
                   { rank: 2, user: 'DJ_Spinz', likes: '890', comments: '156', verified: true, post: 'Dropping a secret set in 10 mins. Find the green door.' },
                   { rank: 3, user: 'Festival_Queen', likes: '650', comments: '98', verified: true, post: 'Who needs VIP when General Admin has this vibe?' },
                   { rank: 4, user: 'Rave_Dave', likes: '420', comments: '45', verified: false, post: 'Trading 2 waters for a charging cable. DM me.' },

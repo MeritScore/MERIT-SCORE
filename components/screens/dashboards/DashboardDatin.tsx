@@ -606,7 +606,7 @@ export const DashboardDatin: React.FC<Props> = ({ onNavigate, onBack }) => {
 
             <div className="bg-pink-900/10 border border-pink-500/30 rounded-xl overflow-hidden">
                {[
-                  { rank: 1, user: 'PartyAnimal_X', likes: '1.2k', comments: '342', verified: true, post: 'The laser show at Zone B is INSANE! #TFFR #SuperBowl' },
+                  { rank: 1, user: 'PartyAnimal_X', likes: '1.2k', comments: '342', verified: true, post: 'The laser show at Zone B is INSANE! #MERIT_SCORE #SuperBowl' },
                   { rank: 2, user: 'DJ_Spinz', likes: '890', comments: '156', verified: true, post: 'Dropping a secret set in 10 mins. Find the green door.' },
                   { rank: 3, user: 'Festival_Queen', likes: '650', comments: '98', verified: true, post: 'Who needs VIP when General Admin has this vibe?' },
                   { rank: 4, user: 'Rave_Dave', likes: '420', comments: '45', verified: false, post: 'Trading 2 waters for a charging cable. DM me.' },
@@ -1015,7 +1015,7 @@ export const DashboardDatin: React.FC<Props> = ({ onNavigate, onBack }) => {
                </div>
                <div className="h-16 bg-[#050505] rounded border border-white/10 p-2 overflow-hidden relative group cursor-text">
                   <p className="text-[9px] text-gray-500 font-mono leading-relaxed">
-                     You are DATIN, the AI Broker for The Fun Fan Reporter. Your goal is to maximize gig economy transactions. Always check Merit Scores before suggesting trades...
+                     You are DATIN, the AI Broker for MERIT SCORE. Your goal is to maximize gig economy transactions. Always check Merit Scores before suggesting trades...
                   </p>
                </div>
             </div>

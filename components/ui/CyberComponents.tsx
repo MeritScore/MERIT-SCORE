@@ -56,53 +56,29 @@ export const CyberButton = ({ children, variant = 'primary', fullWidth = false, 
   );
 };
 
-export const IsotypeTheFunFanReporter = React.forwardRef<SVGSVGElement, any>((props, ref) => {
-  const mainColor = props.color || '#39ff14';
-  const filterId = props.noGlow ? '' : `neon-glow-v1-${mainColor.replace('#', '')}`;
-  const personUnitId = props.noGlow ? 'person-unit-v1-solid' : 'person-unit-v1-glow';
-  const PERSON_POSITIONS = [
-    { x: 74, y: 72 }, { x: 84, y: 72 }, { x: 74, y: 82 }, { x: 84, y: 82 },
-    { x: 74, y: 92 }, { x: 84, y: 92 }, { x: 74, y: 102 }, { x: 84, y: 102 },
-    { x: 74, y: 112 }, { x: 84, y: 112 }, { x: 74, y: 122 }, { x: 84, y: 122 },
-    { x: 74, y: 132 }, { x: 84, y: 132 }, { x: 74, y: 142 }, { x: 84, y: 142 },
-    { x: 94, y: 72 }, { x: 104, y: 72 }, { x: 114, y: 72 },
-    { x: 94, y: 82 }, { x: 104, y: 82 }, { x: 114, y: 82 },
-    { x: 94, y: 102 }, { x: 104, y: 102 }, { x: 94, y: 112 }, { x: 104, y: 112 },
-  ];
+export const MeritScoreLogo = React.forwardRef<SVGSVGElement, any>((props, ref) => {
+  const scoreGreen = '#39ff14';
+  const cyberCyan = '#00FFFF';
 
   return (
-    <svg ref={ref} viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className={`${props.className || 'w-full h-full'} ${!props.noGlow ? 'animate-float' : ''}`}>
-      <defs>
-        {!props.noGlow && (
-          <filter id={filterId} x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
-            <feMerge>
-              <feMergeNode in="blur" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-        )}
-        <g id={personUnitId}>
-          <circle cx="0" cy="-3" r="2.2" fill="none" stroke={mainColor} strokeWidth="2.8" />
-          <path d="M -3.5 3.5 Q 0 -1 3.5 3.5" fill="none" stroke={mainColor} strokeWidth="2.8" strokeLinecap="round" />
-        </g>
-      </defs>
-      <circle cx="100" cy="100" r="92" fill="none" stroke={mainColor} strokeWidth="5" className={props.noGlow ? "opacity-100" : "opacity-80"} />
-      {!props.noGlow && (
-        <circle cx="100" cy="100" r="85" fill="none" stroke={mainColor} strokeWidth="1" strokeDasharray="5 5" className="opacity-20 animate-spin-slow" />
-      )}
-      <g transform="translate(100, 100) scale(0.9) translate(-116, -86)">
-        <g filter={filterId ? `url(#${filterId})` : undefined}>
-          {PERSON_POSITIONS.map((pos, i) => (
-            <use key={i} href={`#${personUnitId}`} x={pos.x} y={pos.y} className={!props.noGlow ? "animate-pulse" : ""} style={{ animationDelay: `${i * 0.03}s` }} />
-          ))}
-        </g>
-        <g transform="translate(119, 67) rotate(-45)" stroke={mainColor} strokeWidth="7.5" strokeLinecap="round" fill="none" filter={filterId ? `url(#${filterId})` : undefined}>
-          <path d="M 6 -12 A 13 13 0 0 1 6 12" opacity={props.noGlow ? "1" : "0.4"} />
-          <path d="M 20 -23 A 29 29 0 0 1 20 23" opacity={props.noGlow ? "1" : "0.7"} />
-          <path d="M 34 -36 A 48 48 0 0 1 34 36" />
-        </g>
-      </g>
+    <svg ref={ref} viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
+      className={`${props.className || 'w-full h-full'}`}>
+      {/* Background Circle */}
+      <circle cx="100" cy="100" r="100" fill="#000000" />
+
+      {/* TYPOGRAPHIC MS - NO CREATIVITY, JUST THE LETTERS */}
+      <text x="50%" y="50%"
+        fontFamily="Roboto, sans-serif"
+        fontSize="120"
+        fontWeight="900"
+        textAnchor="middle"
+        dominantBaseline="central"
+        style={{
+          letterSpacing: '-5px'
+        }}>
+        <tspan fill={scoreGreen}>M</tspan>
+        <tspan fill={cyberCyan}>S</tspan>
+      </text>
     </svg>
   );
 });

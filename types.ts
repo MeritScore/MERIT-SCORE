@@ -1,4 +1,4 @@
-export const APP_VERSION = 'TFFRv19';
+export const APP_VERSION = 'MSv1';
 
 export enum UserRole {
   GUEST = 'GUEST',

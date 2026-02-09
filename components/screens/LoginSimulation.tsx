@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { UserRole } from '../../types';
-import { CyberButton, CyberCard, IsotypeTheFunFanReporter } from '../ui/CyberComponents';
+import { CyberButton, CyberCard, MeritScoreLogo } from '../ui/CyberComponents';
 import { Lock, ExternalLink } from 'lucide-react';
 
 export const LoginSimulation = ({ onSelectRole }: { onSelectRole: (role: UserRole) => void }) => {
@@ -49,15 +49,13 @@ export const LoginSimulation = ({ onSelectRole }: { onSelectRole: (role: UserRol
       <div className={`relative z-10 text-center space-y-4 mb-6 transition-all duration-1000 ${bootPhase >= 2 ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
         <div className="relative mx-auto w-24 h-24 flex items-center justify-center">
           <div className="absolute inset-0 bg-cyber-green/5 rounded-full blur-3xl animate-pulse"></div>
-          <IsotypeTheFunFanReporter ref={svgRef} />
+          <MeritScoreLogo ref={svgRef} />
         </div>
 
         <div className={`space-y-4 transition-all duration-700 delay-300 ${bootPhase >= 2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <h1 className="text-4xl md:text-5xl font-orbitron font-black leading-none tracking-tighter drop-shadow-2xl">
-            <span className="text-white">THE </span>
-            <span className="text-cyber-green drop-shadow-[0_0_15px_rgba(57,255,20,0.6)]">FUN </span>
-            <span className="text-white">FAN</span><br />
-            <span className="text-cyber-green drop-shadow-[0_0_15px_rgba(57,255,20,0.6)]">REPORTER</span>
+            <span className="text-cyber-green drop-shadow-[0_0_15px_rgba(57,255,20,0.6)]">MERIT </span>
+            <span className="text-cyber-cyan drop-shadow-[0_0_15px_rgba(0,255,255,0.6)]">SCORE </span>
           </h1>
           <div className="flex flex-col items-center gap-2">
             <div className="h-[1px] w-24 bg-gradient-to-r from-transparent via-cyber-green to-transparent opacity-60"></div>
@@ -90,8 +88,8 @@ export const LoginSimulation = ({ onSelectRole }: { onSelectRole: (role: UserRol
             </h2>
             <CyberButton fullWidth onClick={() => onSelectRole(UserRole.FAN)} className="h-20 relative overflow-hidden group">
               <div className="absolute top-0 left-0 w-full h-[2px] bg-white/30 animate-scan pointer-events-none"></div>
-              <div className="w-11 h-11 mr-4">
-                <IsotypeTheFunFanReporter color="#000000" noGlow={true} className="w-full h-full" />
+              <div className="w-12 h-12 mr-4 flex items-center justify-center">
+                <MeritScoreLogo noGlow={true} className="w-full h-full" />
               </div>
               <span className="text-2xl tracking-tighter font-black">START THE FUN</span>
             </CyberButton>
@@ -100,9 +98,9 @@ export const LoginSimulation = ({ onSelectRole }: { onSelectRole: (role: UserRol
 
         {/* Exclusive Guest List Link */}
         <div className="text-center px-4 -mt-4">
-          <a 
-            href="https://partiful.com/e/QotsHQ3kj2sHi05d7AF0" 
-            target="_blank" 
+          <a
+            href="https://partiful.com/e/QotsHQ3kj2sHi05d7AF0"
+            target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 py-2 px-4 rounded-lg bg-white/5 border border-white/10 hover:border-cyber-cyan transition-all duration-300 shadow-[0_0_10px_rgba(255,255,255,0.05)]"
           >

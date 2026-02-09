@@ -14,7 +14,7 @@ export const Layout = ({ children, currentScreen, userRole, roleLabel, onNavigat
     ? [
       { id: Screen.ADMIN_TEAM_CHAT, label: 'TEAM CHAT', icon: Users },
       { id: Screen.ADMIN_DASH, label: 'COMMAND', icon: Grid },
-      { id: Screen.FEED, label: 'TFFR CHAT', icon: MessageSquare }, // Public Feed Access
+      { id: Screen.FEED, label: 'MERIT SCORE CHAT', icon: MessageSquare }, // Public Feed Access
     ]
     : [
       { id: Screen.FEED, label: 'CHAT', icon: MessageSquare },
@@ -36,15 +36,9 @@ export const Layout = ({ children, currentScreen, userRole, roleLabel, onNavigat
             {/* Cool Modern Diagonal Line */}
             <div className="w-1.5 h-8 bg-cyber-green skew-x-12 shadow-[0_0_10px_#39ff14]"></div>
 
-            <div className="flex flex-col justify-center">
-              {/* ROW 1: THE FUN FAN */}
-              <div className="flex items-baseline gap-1 leading-none">
-                <span className="font-orbitron font-bold text-[10px] text-white tracking-widest">THE</span>
-                <span className="font-orbitron font-bold text-[10px] text-cyber-green tracking-widest drop-shadow-[0_0_5px_rgba(57,255,20,0.8)]">FUN</span>
-                <span className="font-orbitron font-bold text-[10px] text-white tracking-widest">FAN</span>
-              </div>
-              {/* ROW 2: REPORTER */}
-              <span className="font-orbitron font-bold text-base text-cyber-green tracking-widest leading-none -mt-0.5 drop-shadow-[0_0_8px_rgba(57,255,20,0.6)]">REPORTER</span>
+            <div className="flex flex-row items-baseline gap-2">
+              <span className="font-orbitron font-bold text-xl text-cyber-green tracking-widest leading-none drop-shadow-[0_0_8px_rgba(57,255,20,0.6)]">MERIT</span>
+              <span className="font-orbitron font-bold text-xl text-cyber-cyan tracking-widest leading-none drop-shadow-[0_0_8px_rgba(0,255,255,0.6)]">SCORE</span>
             </div>
           </div>
 
@@ -53,7 +47,7 @@ export const Layout = ({ children, currentScreen, userRole, roleLabel, onNavigat
               <p className="text-[10px] text-gray-500 font-mono uppercase">Role</p>
               <p className="text-xs font-bold text-cyber-cyan">{roleLabel || userRole}</p>
             </div>
-            <button onClick={onLogout} className="p-2 text-gray-500 hover:text-red-500 transition-colors">
+            <button onClick={onLogout} className="p-2 text-gray-500 hover:text-red-500 transition-colors" aria-label="Logout">
               <LogOut size={20} />
             </button>
           </div>

@@ -16,9 +16,9 @@ export default defineConfig(({ mode }) => {
         registerType: 'autoUpdate',
         includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
         manifest: {
-          name: 'The Fun Fan Reporter',
-          short_name: 'FunFanReporter',
-          description: 'The ultimate fan reporting experience.',
+          name: 'MERIT SCORE',
+          short_name: 'MeritScore',
+          description: 'High-fidelity reputation and impact tracking system.',
           theme_color: '#050505',
           background_color: '#050505',
           display: 'standalone',

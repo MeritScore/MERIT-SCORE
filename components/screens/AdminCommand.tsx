@@ -8,7 +8,7 @@ import {
    RefreshCcw, RotateCw, ToggleLeft, ToggleRight, Undo2, Lock, Bomb, Copy, Save, ChevronDown, AlertTriangle, Play, Send,
    AlertOctagon, Scale, Headset, BarChart2, Briefcase, Eye, Link
 } from 'lucide-react';
-import { CyberButton, CyberCard, SectionHeader, CyberBadge, IsotypeTheFunFanReporter } from '../ui/CyberComponents';
+import { CyberButton, CyberCard, SectionHeader, CyberBadge, MeritScoreLogo } from '../ui/CyberComponents';
 import { Screen } from '../../types';
 
 interface Props {
@@ -708,7 +708,7 @@ export const AdminCommand: React.FC<Props> = ({ adminId, onNavigate }) => {
 
             <div className="bg-pink-900/10 border border-pink-500/30 rounded-xl overflow-hidden">
                {[
-                  { rank: 1, user: 'PartyAnimal_X', likes: '1.2k', comments: '342', verified: true, post: 'The laser show at Zone B is INSANE! #TFFR #SuperBowl' },
+                  { rank: 1, user: 'PartyAnimal_X', likes: '1.2k', comments: '342', verified: true, post: 'The laser show at Zone B is INSANE! #MERIT_SCORE #SuperBowl' },
                   { rank: 2, user: 'DJ_Spinz', likes: '890', comments: '156', verified: true, post: 'Dropping a secret set in 10 mins. Find the green door.' },
                   { rank: 3, user: 'Festival_Queen', likes: '650', comments: '98', verified: true, post: 'Who needs VIP when General Admin has this vibe?' },
                   { rank: 4, user: 'Rave_Dave', likes: '420', comments: '45', verified: false, post: 'Trading 2 waters for a charging cable. DM me.' },

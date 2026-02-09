@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CyberButton, IsotypeTheFunFanReporter } from '../ui/CyberComponents';
+import { CyberButton, MeritScoreLogo } from '../ui/CyberComponents';
 import { X, Facebook, Instagram } from 'lucide-react';
 
 interface Props {
@@ -40,7 +40,7 @@ export const LoginScreen: React.FC<Props> = ({ onBack, onSwitchToSignup, onLogin
       <div className="w-full max-w-sm relative z-20">
         {/* Header with Close Button */}
         <div className="flex justify-end mb-2">
-          <button 
+          <button
             onClick={onBack}
             className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-all"
           >
@@ -50,33 +50,33 @@ export const LoginScreen: React.FC<Props> = ({ onBack, onSwitchToSignup, onLogin
 
         {/* Logo and Headings */}
         <div className="text-center space-y-2 mb-8">
-           <div className="flex justify-center mb-1">
-              <div className="w-12 h-12">
-                 <IsotypeTheFunFanReporter color="#39ff14" noGlow={true} />
-              </div>
-           </div>
-           <h1 className="text-3xl font-orbitron font-black text-white uppercase tracking-tight drop-shadow-lg">
-             LOG IN
-           </h1>
+          <div className="flex justify-center mb-1">
+            <div className="w-12 h-12">
+              <MeritScoreLogo color="#39ff14" noGlow={true} />
+            </div>
+          </div>
+          <h1 className="text-3xl font-orbitron font-black text-white uppercase tracking-tight drop-shadow-lg">
+            LOG IN
+          </h1>
         </div>
 
         {/* Form Inputs */}
         <div className="space-y-3 mb-4">
           <div className="relative group">
-            <input 
-              type="email" 
+            <input
+              type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value.toLowerCase())}
-              placeholder="Email" 
+              placeholder="Email"
               className="w-full bg-cyber-dark/80 border border-white/10 rounded-lg px-4 py-3 text-white font-sans focus:outline-none focus:border-cyber-purple/50 focus:ring-1 focus:ring-cyber-purple/20 transition-all placeholder:text-gray-500"
             />
           </div>
           <div className="relative group">
-            <input 
-              type="password" 
+            <input
+              type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="Password" 
+              placeholder="Password"
               className="w-full bg-cyber-dark/80 border border-white/10 rounded-lg px-4 py-3 text-white font-sans focus:outline-none focus:border-cyber-purple/50 focus:ring-1 focus:ring-cyber-purple/20 transition-all placeholder:text-gray-500"
             />
           </div>
@@ -91,8 +91,8 @@ export const LoginScreen: React.FC<Props> = ({ onBack, onSwitchToSignup, onLogin
 
         {/* Main Action Button */}
         <div className="mb-5">
-          <CyberButton 
-            fullWidth 
+          <CyberButton
+            fullWidth
             onClick={handleLogin}
             className="!rounded-xl shadow-[0_0_20px_rgba(57,255,20,0.4)]"
           >
@@ -113,7 +113,7 @@ export const LoginScreen: React.FC<Props> = ({ onBack, onSwitchToSignup, onLogin
             <GoogleLogo />
             <span className="uppercase font-orbitron text-[10px] tracking-widest font-bold">Continue with Google</span>
           </button>
-          
+
           <button className="w-full bg-[#0a0a0a] border border-white/20 text-white font-bold font-orbitron h-12 rounded-lg flex items-center justify-center gap-3 hover:bg-black transition-all active:scale-[0.98] duration-200 uppercase group">
             <AppleLogo />
             <span className="uppercase font-orbitron text-[10px] tracking-widest font-bold">Continue with Apple</span>
@@ -141,8 +141,8 @@ export const LoginScreen: React.FC<Props> = ({ onBack, onSwitchToSignup, onLogin
         {/* Footer Link */}
         <div className="text-center">
           <p className="text-gray-300 font-sans text-sm">
-            New to The Fun Fan Reporter? {' '}
-            <button 
+            New to MERIT SCORE? {' '}
+            <button
               onClick={onSwitchToSignup}
               className="text-cyber-purple font-black hover:underline underline-offset-4"
             >

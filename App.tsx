@@ -161,7 +161,7 @@ const App = () => {
                     <CheckCircle2 size={20} className="text-cyber-green" />
                   </div>
                   <div className="flex-1">
-                    <h5 className="font-rajdhani font-bold text-white text-lg leading-none mb-1">Welcome to TFFR</h5>
+                    <h5 className="font-rajdhani font-bold text-white text-lg leading-none mb-1">Welcome to MERIT SCORE</h5>
                     <p className="font-sans text-sm text-gray-200 leading-relaxed">Your account verification is complete. You can now access the Global Chat.</p>
                     <span className="text-[10px] font-mono text-gray-500 mt-2 block">Today, 10:42 AM</span>
                   </div>
